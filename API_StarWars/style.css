@@ -1,9 +1,47 @@
- .bi-circle{
+  .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
 
-background-color: red !important;
-border-radius:50%;
-width: 100px;
-height: 100px;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 38px;
+            left: 19px;
+            height: 100%;
+            width: 4px;
+            background-color: #ddd;
+        }
 
-}
+        .timeline-item {
+            position: relative;
+            padding: 60px 20px;
+            margin-bottom: 20px;
+        }
 
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: -10px;
+            height: 12px;
+            width: 12px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+        }
+
+        .timeline-item.active::before {
+            background-color: yellow;
+            border-color: yellow !important;
+        }
+
+        .timeline-item.secondary::before {
+            background-color: yellow;
+            border-color: yellow;
+        }
+
+        .timeline-item.tertiary::before {
+            background-color: yellow;
+            border-color: yellow;
+        }
